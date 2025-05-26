@@ -4,17 +4,31 @@
 
 This is a Vite-based template with following setup:
 
-- [ReScript](https://rescript-lang.org) 11.0 with @rescript/react, [Core](https://github.com/rescript-association/rescript-core) and JSX v4
+- [ReScript](https://rescript-lang.org) 12.0 with @rescript/react, and JSX v4
 - ES6 modules (ReScript code compiled to `.res.mjs` files)
 - Vite 6 with React Plugin (Fast Refresh)
-- Tailwind 4
 - Open-Props
+- Tailwind 4 [option]
 
 ```bash
 bun i rescript@next
 bun i @rescript/webapi@experimental
 bun i @rescript/react@next
 bun i @jihchi/vite-plugin-rescript
+```
+
+compiler use `rewatch`:
+
+```json package.json
+  "scripts": {
+    "res:build": "rewatch",
+    "res:clean": "rewatch clean",
+    "res:dev": "rewatch watch",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+
 ```
 
 ## Development
@@ -46,3 +60,5 @@ In ReScript, it's a good habit to keep track of the actual JS output the compile
 This will also make it easier for your Non-ReScript coworkers to read and understand the changes in Github PRs, and call you out when you are writing inefficient code.
 
 If you want to opt-out, feel free to remove all compiled `.res.mjs` files within the `src` directory and add `src/**/*.res.mjs` in your `.gitignore`.
+
+### If you use `tailwindcss 4`, and add `./src/*.res.mjs` to `.gitignore`, vite will not work properly after modifying tailwindcss. A temporary solution is to comment out `*.res.mjs` in `.gitignore` before starting vite, and then re-add `*.res.mjs` after vite starts loading configuration.
