@@ -1,0 +1,58 @@
+body {
+  display: grid;
+  place-content: center;
+}
+
+/* Use the custom properties provided by Open Props */
+body {
+  margin: var(--size-4);
+  padding: var(--size-6);
+  font-size: var(--font-size-2);
+  /* margin: 0 auto;
+}
+
+h1 {
+  opacity: 0;
+  animation:
+    var(--animation-fade-in) forwards,
+    var(--animation-slide-in-up) forwards;
+  animation-timing-function: var(--ease-squish-3);
+}
+
+.fluid-gap {
+  display: grid;
+  justify-items: start;
+  gap: var(--size-fluid-3);
+}
+
+.card {
+  border-radius: var(--radius-2);
+  padding: var(--size-fluid-3);
+  box-shadow: var(--shadow-2);
+
+  &:hover {
+    box-shadow: var(--shadow-3);
+  }
+
+  @media (--motionOK) {
+    animation: var(--animation-fade-in);
+  }
+}
+
+input {
+  field-sizing: content;
+}
+
+.container {
+  display: flex;
+  /* grid-template-rows: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--size-4);
+}
+
+button:hover {
+  background-color: var(--gray-700);
+  transform: scale(1.05);
+}
+
