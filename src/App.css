@@ -8,7 +8,7 @@ body {
   margin: var(--size-4);
   padding: var(--size-6);
   font-size: var(--font-size-2);
-  /* margin: 0 auto;
+  margin: 0 auto;
 }
 
 h1 {
@@ -45,7 +45,7 @@ input {
 
 .container {
   display: flex;
-  /* grid-template-rows: auto;
+  grid-template-rows: auto;
   flex-direction: row;
   justify-content: flex-start;
   gap: var(--size-4);
@@ -55,4 +55,3 @@ button:hover {
   background-color: var(--gray-700);
   transform: scale(1.05);
 }
-
