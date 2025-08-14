@@ -13,9 +13,8 @@
     }
   ],
   "suffix": ".res.mjs",
-
-  "bs-dependencies": ["@rescript/react", "@rescript/webapi"],
-  "bsc-flags": ["-open WebAPI.Global"],
+  "dependencies": ["@rescript/react", "@rescript/webapi"],
+  "compiler-flags": ["-open WebAPI", "-open WebAPI.Global"],
   "jsx": {
     "version": 4
   }
